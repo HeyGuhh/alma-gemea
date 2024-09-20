@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root {
+    --font-text: "Kanit", sans-serif;
+    --font-title: "Rubik", sans-serif;
+    --font-letter: "Dancing Script", cursive;
+    --background-color-1: #b3e7ff;
+    --background-color-2: #00061c;
+    --background-color-introduction: #8bdaff;
+    --color-scroll: #57c2f4;
+}
+
+/* Padronização */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family: var(--font-title);
+}
+
+h2 {
+    font-size: 1.7em;
+    font-family: var(--font-title);
+}
+
+p {
+    font-size: 18px;
+    font-family: var(--font-text);
+}
+
+hr {
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-image: linear-gradient(to left, #b3e7ff, #3dbbf6, #b3e7ff);
+    border: none;
+}
+
+/* Scrool View */
+::-webkit-scrollbar-thumb {   
+    background-color: var(--color-scroll);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--background-color-1)
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Estilizações */
+body {
+    background-color: var(--background-color-1);
+    cursor: url('./assets/cursor 1.png') 25 15, auto;
+}
+
+body:active {
+    cursor: url('./assets/cursor 2.png') 25 15, auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.div__introduction {
+    border-radius: 10px;
+}
+
+.div__time-area {
+    background-color: var(--background-color-introduction);
+    padding: 0 1.4em;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.div__cartinhas {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div__cartinhas h2 {
+    margin-bottom: 10px;
+    align-self: flex-start;
+    margin-bottom: 1.5em;
+}
+
+.img__corda {
+    width: 90%;
+    z-index: 2;
+    margin: -20px 0;
+}
+
+.div__cartinha-area {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--background-color-introduction);
+    padding: 2em 1.4em;
+}
+
+.div__cartinha-area:last-child {
+    padding-bottom: 0;
+}
+
+.div__cartinha-area:last-child p {
+    margin-bottom: 1em;
+}
+
+.div__cartinha-area p {
+    margin: 0;
+}
+
+.img--photos {
+    width: 25vh;
+    border-radius: 10px;
+    margin-right: 50px; 
+    border: 2px solid black;
+}
+
+.hr__new-division {
+    margin-top: 40px;
+}
+
+.hr__new-division-2 {
+    margin-top: 40px;
+    background-image: linear-gradient(to left, var(--background-color-2), #410887, var(--background-color-2));
+}
+
+/* Começo da parte 2 */
+.section__part-2 {
+    background-color: var(--background-color-2);
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.section__part-2 p, .section__part-2 h2 {
+    color: white;
+}
+
+.span__dark-mode {
+    width: 100%;
+    height: 5vw;
+    padding: 0;
+    margin: 0;
+    background-image: url('./assets/faixa.png');
+    background-size: 50%;
+    background-repeat: repeat-x;
+    margin-top: 50px;
+}
+
+.content-box {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.content-box h2 {
+    align-self: flex-start;
+}
+
+.div__nasa {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div__nasa--content {
+    margin-top: 40px;
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.img__nasa {
+    width: 50%;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 71, 224);
+    transition: transform 0.4s;
+}
+
+.img__nasa:hover {
+    transform: scale(1.1);
+}
+
+.div__nasa p {
+    padding: 0.7em 2.3em;
+    margin: 0;
+}
+
+.div__parque--content {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.img__parque {
+    width: 50%;
+    border: 2px solid var(--background-color-introduction);
+    border-radius: 15px;
+    transition: transform 0.4s;
+}
+
+.img__parque:hover {
+    transform: scale(1.1);
+}
+
+
+.div__parque--content p {
+    padding: 0.7em 2.3em;
+    margin: 0;
+}
+
+.span__light-mode {
+    width: 100%;
+    height: 5vw;
+    padding: 0;
+    margin: 0;
+    background-image: url('./assets/faixa.png');
+    background-size: 50%;
+    background-repeat: repeat-x;
+    transform: rotate(180deg);
+    margin-top: -2px;
+}
+
+/* Parte 3 */
+.section__part-3 {
+    margin-top: 40px;
+}
+
+.div__recadinhos {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.div__recadinhos-content {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 30%;
+    align-items: center;
+    justify-items: center;
+}
+
+/* * Envelopes * */
+/* Fundo */
+.div__carta {
+    width: 200px;
+    height: 100px;
+    cursor: url('./assets/cursor 1.png') 25 15, auto; 
+    background-color: #054f64;
+    border: 2px solid black; 
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 0;
+    transition: transform 0.2s;
+}
+
+.div__carta:active {
+    cursor: url('./assets/cursor 2.png') 25 15, auto; 
+
+}
+
+/* Mouse sobre a carta */
+.div__carta:hover {
+    transform: scale(1.1);
+}
+
+/* Frente */
+.div__carta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 100px solid #d9f9ff;
+    border-right: 100px solid #ffffff;
+    border-bottom: 50px solid #ffffff;
+    border-top: 50px solid transparent;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Topo */
+.div__topo {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid var(--background-color-introduction);
+    transition: transform 0.4s;
+    transform-origin: top;
+    z-index: 2;
+}
+
+/* Topo abrindo */
+.topo-ativado {
+    transform: rotateX(90deg);
+}
+
+/* Carta */
+.div__letter {
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    height: 80%;
+    padding: 0;
+    z-index: 1;
+}
+
+/* Carta subindo */
+.letter-ativado {
+    animation: open-card forwards 0.4s 0.3s;
+}
+
+/* Texto da carta */
+.div__letter p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--font-letter);
+}
+
+/* Ajustes do pop-up */
+.div__popup {
+    background-color: #000000a2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+}
+
+.div__popup p {
+    background-color: white;
+    border: 2px solid var(--background-color-introduction);
+    padding: 0.7em 1.4em;
+    font-family: var(--font-letter);
+    font-size: 24px;
+    max-width: 700px;
+}
+
+.show-popup {
+    display: flex;
+    animation: fade-in forwards 0.2s;
+}
+
+.div__love-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.div__love-you-content {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: var(--background-color-introduction);
+    padding: 0.7em 1.4em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 0 15px 0 15px;
+    border: 2px solid var(--color-scroll);
+    font-family: var(--font-title);
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.div__love-you-content p {
+    font-size: 28px;
+    font-weight: 500;
+    color: rgb(39, 25, 187);
+}
+
+.p__love-you-next, .p__love-you-last {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    margin: 0;
+    box-sizing: content-box;
+    line-height: 100%;
+}
+
+.p__love-you-next {
+    transform: translate(50%, -50%);
+    opacity: 0;
+}
+
+.p__love-you-last {
+    transform: translate(50%, 50%);
+    opacity: 1;
+}
+
+.div__love-country {
+    width: 60%;
+    display: flex;
+    justify-content: end;
+}
+
+.p__love-country {
+    display: inline;
+    margin: 0;
+    text-align: end;
+    background-color: #00061c;
+    border-radius: 5px;
+    min-width: 150px;
+    text-align: center;
+    padding: 0.3em 0.6em;
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+    .div__cartinha-area {
+        flex-direction: column;
+    }
+    
+    .div__cartinha-area p {    
+    margin-bottom: 40px;
+    }
+
+    .img--photos {
+        margin-right: 0;
+    }
+
+    .div__nasa--content, .div__parque--content {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+
+    .img__nasa, .img__parque {
+        width: 80%;
+    }
+
+    .div__recadinhos-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .div__carta:nth-child(2n - 1) {
+        align-self: self-start;
+    }
+
+    .div__carta:nth-child(2n) {
+        align-self: self-end;
+    }
+}
+
+@keyframes open-card {    
+    to { transform: scale(1.2) translateY(-15px) }
+}
+
+@keyframes fade-in {
+    to { opacity: 1 }
+}
+
+@keyframes show-next {
+    from {
+        transform: translate(50%, -50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(50%, 50%);
+        opacity: 1;
+    }
+}
+
+@keyframes hide-last {
+    from {
+        transform: translate(50%, 50%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(50%, 100%);
+        opacity: 0;
+    }
+}
