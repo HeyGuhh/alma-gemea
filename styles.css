@@ -476,17 +476,22 @@ section {
     width: fit-content;
     overflow: hidden;
     position: relative;
-    /* width: 100%; */
+
+    /* Testes */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
 }
 
 .div__music-area {
     background-color: #00061c;
     border-radius: 0 10px 10px 0;
-    display: flex;
     align-items: center;
+    display: flex;
     width: 80px;
     transition: width 0.5s;
     margin: 40px 0;
+    transition: width 0.5s;
 }
 
 .div__music-area-pre {
@@ -512,8 +517,14 @@ section {
     color: white;
 }
 
+.p__music-icon:hover {
+    color: var(--background-color-1)
+}
+
 .div__music-area-start {
-    animation: width-all 0.5s forwards;
+    /* animation: width-all 0.5s forwards; */
+    width: 90%;
+    /* Testes */
 }
 
 .p__music-letter-start {
@@ -523,6 +534,7 @@ section {
 
 .p__music-icon-start {
     color: rgb(136, 250, 13);
+    border-right: 2px solid white;
 }
 
 @media screen and (max-width: 767px) {
@@ -565,6 +577,10 @@ section {
     .div__carta:nth-child(2n) {
         align-self: self-end;
     }
+
+    .div__music-content {
+        display: block;
+    }
 }
 
 @keyframes open-card {    
@@ -601,6 +617,6 @@ section {
 
 @keyframes width-all {
     to {
-        width: 100%;
+        width: 90%;
     }
 }

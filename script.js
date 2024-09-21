@@ -43,17 +43,35 @@ function getConvertedTime() {
     let days_dif = nowDate.getDate() - knowDate.getDate();
     let months_dif = (nowDate.getMonth() + 1) - (knowDate.getMonth() + 1);
     let years_dif = nowDate.getFullYear() - knowDate.getFullYear();
-
+    console.log([months_dif, nowDate.getMonth() + 1, knowDate.getMonth() + 1])
+    
     // Ajustando se for menor
-    if (seconds_dif < 0) seconds_dif += 60;
-    if (minutes_dif < 0) minutes_dif += 60;
-    if (hours_dif < 0) hours_dif += 24;
-    if (days_dif < 0) days_dif += 30;
-    if (months_dif < 0) months_dif += 12;
+    if (seconds_dif < 0) {
+        seconds_dif += 60;
+        minutes_dif--;
+    }
+
+    if (minutes_dif < 0) {
+        minutes_dif += 60;
+        hours_dif--;
+    }
+    if (hours_dif < 0) {
+        hours_dif += 24;
+        days_dif--;
+    }
+
+    if (days_dif < 0) {
+        days_dif += 30;
+        months_dif--;
+    }
+    if (months_dif < 0) {
+        months_dif += 12;
+        years_dif--;
+    }
 
     // Ajustando textos
     let finalText = [];
-    if (years_dif)
+    if (years_dif > 0)
         finalText.push(`${years_dif} ano${years_dif > 1 ? 's' : ''}`)
     if (months_dif)
         finalText.push(`${months_dif} mes${months_dif > 1 ? 'es' : ''}`)
@@ -257,8 +275,8 @@ function setSoundElements(count) {
         letterElement.classList.add('p__music-letter');
         iconElement.classList.add('p__music-icon');
 
-        divElement.appendChild(letterElement);
         divElement.appendChild(iconElement);
+        divElement.appendChild(letterElement);
         divMusicElement.appendChild(divElement);
         divMusicsElements.push(divElement); 
         iconElement.onclick = () => showMusic(countX);
@@ -276,7 +294,7 @@ function configureHeight() {
     divMusicsElements.forEach(e => e.style.height = `${musicHeight}px`);
     elementBase.classList.remove('div__music-area-pre');
     elementBase.childNodes[0].classList.remove('p__music-letter-pre');  
-}
+} 
 
 configureHeight();
 
@@ -284,8 +302,8 @@ configureHeight();
 let lastSongElement = { letter: '', div: '' };
 function showMusic(index) {
     const element = divMusicsElements[index];
-    const text = element.childNodes[0];
-    const icon = element.childNodes[1];
+    const text = element.childNodes[1];
+    const icon = element.childNodes[0];
 
     // Abrir
     if (!text.classList.contains('p__music-letter-start')) {
@@ -301,6 +319,7 @@ function showMusic(index) {
         fadeInSound();
     } 
 
+    // Fechar
     else {
         text.classList.remove('p__music-letter-start');
         element.classList.remove('div__music-area-start');
